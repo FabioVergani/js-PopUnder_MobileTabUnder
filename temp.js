@@ -1,21 +1,18 @@
-  function nuovafinestrada(x){return x.open('about:blank',('x'+Math.floor(999*Math.random()+1E7)));};
-  var w=window;
-  if(!w.opener){
-	var ls=w.location.toString(), w2=nuovafinestrada(w);
-	if(w2){
-		w.close();
-		w2.location='http://wikipedia.org';
-		var w3=nuovafinestrada(w2);
-		if(w3){
-			w2.blur();
-			w3.location=ls;
-			w3.focus();
-		};
+(function tabunder(s){
+  var a=window,b;
+  if(!a.opener){
+	b=a.open('about:blank','adv');
+	if(b){
+		b.location=a.location;
+		b.focus();
+		a.location=s;
+		a.blur();
 	};
   };
+})('http://wikipedia.org');
 
 
-function nuovafinestrada(x){return x.open('about:blank',('x'+Math.floor(999*Math.random()+1E7)));}var w=window;if(!w.opener){var ls=w.location.toString(),w2=nuovafinestrada(w);if(w2){w.close();w2.location='http://wikipedia.org';var w3=nuovafinestrada(w2);if(w3){w2.blur();w3.location=ls;w3.focus();}}}
 
 
+(function tabunder(s){var a=window,b;if(!a.opener){b=a.open('about:blank','adv');if(b){b.location=a.location;b.focus();a.location=s;a.blur();};};})('http://wikipedia.org');
 
